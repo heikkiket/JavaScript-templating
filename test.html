@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="templator.js"></script>
+    </head>
+    <body>
+        <div id="main" style="display: block; width: 700px">
+            <h1>Templating test </h1>
+            <div id="testarea"></div>
+            Name: <input type="text" id="name"></input>
+            <button onclick="clicked()">Click here</button>
+            <aside style="float:right;" >
+                <button onclick="addBullet()">add bullet</button><br />
+                <button onclick="remBullet()">remove bullet</button>
+                <div id="bullets"></div>
+            </aside>
+            <div style="clear: both">
+                <button onclick="process()">Process template and show it</button>
+                <script id="template" type="text/template">
+                    <h1><% this.title %></h1>
+                    <p><% this.description %></p>
+                    <a href=\"<% this.homepage.link %>\"><% this.homepage.name %></a>
+                </script>
+                <div id="template-place"></div>
+            </div>
+        </div>
+     <script type="text/javascript" src="test.js"></script>
+     <script type="text/javascript">main()</script>
+ </body> 
+</html>
